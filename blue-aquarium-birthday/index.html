@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#071b38" />
+  <title>Little Blue World 💙</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <main class="page">
+    <header class="hero">
+      <p class="eyebrow">Our little aquarium</p>
+      <h1>Happy Birthday, My Love <span>💙</span></h1>
+      <p class="subtitle">hihi, jgn lupa tekan "Play Our Song" dulu</p>
+      <p class="instructions">Tap the fishes for the surprises!</p>
+    </header>
+
+    <section class="aquarium-shell" aria-label="Interactive pixel aquarium">
+      <div class="aquarium" id="aquarium">
+        <div class="sun-glow"></div>
+        <div class="water-line"></div>
+        <div class="bubble bubble-one"></div>
+        <div class="bubble bubble-two"></div>
+        <div class="bubble bubble-three"></div>
+        <div class="bubble bubble-four"></div>
+
+        <button class="fish fish-one" type="button" data-secret="fish" aria-label="Feed the first fish">
+          <span class="fish-tail"></span><span class="fish-body">🐟</span>
+        </button>
+        <button class="fish fish-two" type="button" data-secret="fish2" aria-label="Feed the second fish">
+          <span class="fish-tail"></span><span class="fish-body">🐠</span>
+        </button>
+        <button class="jelly" type="button" data-secret="jelly" aria-label="Discover a jellyfish message">🪼</button>
+        <button class="sea-object pearl" type="button" data-secret="pearl" aria-label="Discover a pearl message">🦪</button>
+        <button class="sea-object chest" type="button" data-secret="chest" aria-label="Discover the treasure chest">🧰</button>
+
+        <div class="seaweed seaweed-left">♣</div>
+        <div class="seaweed seaweed-right">♣</div>
+        <div class="sand"></div>
+        <div class="aquarium-label">AQUARIUM OF OUR MEMORIES</div>
+      </div>
+    </section>
+
+    <section class="progress-section" aria-label="Discovery progress">
+      <div class="progress-copy">
+        <span>Memories discovered</span>
+        <span id="progress-text">0 / 5 discoveries</span>
+      </div>
+      <div class="progress-track" role="progressbar" aria-label="Discovery progress" aria-valuemin="0" aria-valuemax="5" aria-valuenow="0" id="progress-bar">
+        <div class="progress-fill" id="progress-fill"></div>
+      </div>
+      <p class="progress-hint">Find every secret to unlock your birthday letter ✨</p>
+    </section>
+
+    <footer>
+      <p>Made with love, just for you. Aiman Andy. <span>♡</span></p>
+    </footer>
+  </main>
+
+  <div class="toast" id="toast" role="status" aria-live="polite"></div>
+
+  <div class="memory-popup" id="memory-popup" aria-hidden="true">
+    <section class="memory-card" role="dialog" aria-modal="true" aria-labelledby="memory-title">
+      <button class="popup-close" id="close-popup" type="button" aria-label="Close memory">×</button>
+      <div class="popup-decoration">✦ ⋆ ˚｡⋆</div>
+      <img id="couple-photo" class="couple-photo" alt="A favourite memory together" />
+      <p class="popup-kicker">A MESSAGE FROM MY HEART</p>
+      <h2 id="memory-title">A little memory</h2>
+      <p id="memory-caption" class="memory-caption"></p>
+      <p class="popup-footer">always a little piece of my heart ♡</p>
+    </section>
+  </div>
+
+  <audio id="bg-music" loop preload="auto">
+  <source src="music/background.mp3" type="audio/mpeg">
+</audio>
+
+<button id="music-toggle" class="music-toggle" type="button" aria-label="Play background music">
+  ♫ <span id="music-label">Play our song</span>
+</button>
+
+  <script src="script.js"></script>
+</body>
+</html>
